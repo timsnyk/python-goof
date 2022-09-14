@@ -14,3 +14,4 @@ steps:
     monitorWhen: 'never'
     failOnIssues: true
     projectName: 'python-azure'
+    testDirectory: '$(Build.SourcesDirectory)/pip-sample'
