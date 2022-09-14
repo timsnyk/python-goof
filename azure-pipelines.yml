@@ -1,0 +1,15 @@
+# Snyk demo pipeline
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'timsnyk'
+    testType: 'app'
+    monitorWhen: 'never'
+    failOnIssues: true
+    projectName: 'python-azure'
