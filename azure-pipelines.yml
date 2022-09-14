@@ -14,7 +14,7 @@ steps:
       addToPath: false
     name: pyTools
 
-  - script: $(pyTools.pythonLocation)/bin/pip install
+  - script: $(pyTools.pythonLocation)/bin/pip install -r pip-sample/requirements.txt
     displayName: Install Python-based tools.
 
   - task: UsePythonVersion@0
