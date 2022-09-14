@@ -7,6 +7,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'pip install -r pip-sample/requirements.txt'
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'timsnyk'
