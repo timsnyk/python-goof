@@ -9,5 +9,6 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'timsnyk'
     testType: 'app'
-    failOnIssues: false
     monitorWhen: 'never'
+    failOnIssues: false
+    testDirectory: '$(Build.SourcesDirectory)/pip-sample'
